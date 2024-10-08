@@ -1,0 +1,874 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Pretendard-Regular';
+    width: 100vw;
+}
+
+/* 시이작 */
+
+@keyframes btn_hover {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+@keyframes appear_navBar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.banner {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_box {
+    display: flex;
+    width: 80%;
+}
+
+.content_box>article {
+    width: 50%;
+}
+
+.content_box p {
+    font-size: 1.5rem;
+    padding: 2.5rem 0 3rem 0;
+    line-height: 2rem;
+}
+
+/* header */
+header {
+    height: 4.5rem;
+}
+
+nav:first-child {
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+}
+
+nav:first-child>ul {
+    display: flex;
+}
+
+nav:first-child>#logo {
+    /* margin: 0 19rem 0 7rem; */
+    margin: 0 34rem 0 10rem;
+    width: 10rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: 99% 85%;
+    background-position-y: center;
+}
+
+nav:first-child>ul>li {
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01rem;
+}
+
+#line {
+    padding: 0 0.3rem 0 1rem;
+    border-left: thin solid #32a1ce;
+    height: 1rem;
+}
+
+/* nav2 */
+#arco_menu {
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 25vh;
+    z-index: 99999;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    background-color: rgb(255, 255, 255);
+}
+
+header>#arco_menu>div {
+    width: 22rem;
+    margin: 1rem 0 1rem 0;
+    border-right: 1px solid gray;
+    color: rgb(168, 162, 162);
+}
+
+header>#arco_menu>div>h6 {
+    font-weight: 600;
+}
+
+header>#arco_menu>div>ul {
+    list-style-type: circle;
+    padding: 1rem 0 0 1.5rem;
+}
+
+header>#arco_menu>div>ul>li {
+    padding: 0.2rem;
+}
+
+
+.show_animation {
+    animation: appear_navBar 0.4s;
+
+}
+
+/* first page */
+#first_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+#first_page>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first_page>div>h3 {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: -0.2rem;
+    color: white;
+}
+
+#first_page>div>h3:nth-child(2) {
+    margin: 4rem 0;
+}
+
+#first_page>div>h5 {
+    margin: 0 0 2rem 0;
+    font-weight: 700;
+    letter-spacing: -0.1rem;
+    color: rgb(155, 155, 155)
+}
+
+#first_page>div>button {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50rem;
+    color: white;
+}
+
+button>img {
+    width: 1.5rem;
+    margin: 0 0 0 0.1rem;
+}
+
+.icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0.3rem 0 0 0;
+}
+
+#consult_btn {
+    padding: 0.7rem 1rem;
+    border-radius: 50rem;
+    background-color: rgb(20, 20, 216);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: -0.1rem;
+    margin: 0 1rem 0 2rem;
+}
+
+#contents {
+    z-index: 99;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    height: 90vh;
+    object-fit: cover;
+    aspect-ratio: 3;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(20, 19, 19);
+}
+
+
+.more_btn {
+    padding: 0.7rem 1rem;
+    border-radius: 50rem;
+    background-color: rgb(20, 20, 216);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: -0.1rem;
+    box-shadow: 3px 3px 8px 0px rgb(142, 152, 226);
+
+}
+
+.more_btn:hover {
+    animation: btn_hover 1s;
+}
+
+.more_btn>img {
+    margin: 0 0 0 2rem;
+    padding: 0 0 0.1rem 0;
+}
+
+/* second_page */
+#second_page {
+    width: 100%;
+    height: 150vh;
+    background-size: 100%;
+    background-image: url('https://ex.kinkos.co.kr/images/Mainhome_Interview_ourprojectBG.png');
+    background-size: 98%;
+    background-repeat: no-repeat;
+}
+
+.title {
+    padding: 1rem 0 0 1rem;
+}
+
+
+.title>h6 {
+    color: rgb(20, 20, 216);
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+}
+
+.title>h3 {
+    font-size: 3.5rem;
+    letter-spacing: -0.1rem;
+    font-weight: 600;
+}
+
+#content_2_1 {
+    height: 65vh;
+    padding: 3rem 0 0 0;
+}
+
+#content_2_1 button,
+#content_2_1 p {
+    margin: 0 0 0 5rem;
+
+}
+
+#photo_box {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 0 10rem 0;
+}
+
+.item_box>img {
+    width: 46rem;
+    object-fit: cover;
+    height: 20rem;
+}
+
+.item_box>h4 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 1rem 0 0 0;
+
+}
+
+.item_box>h6 {
+    font-size: 1.2rem;
+    color: rgb(150, 150, 150);
+    font-weight: 600;
+}
+
+#content_2_2 {
+    padding: 7rem 0 0 0;
+}
+
+#content_2_2>article>button {
+    position: relative;
+    right: -33rem;
+    top: 8rem;
+}
+
+/* third_page */
+#third_page {
+    background-image: url('https://ex.kinkos.co.kr/images/Main-Home_INTERVIEWBG_1440.png');
+    object-fit: cover;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+#third_page .swiper {
+    width: 100%;
+    height:18rem;
+    padding: 10rem 0;
+    /* border:3px solid red; */
+  }
+  
+
+  .swiper-button-prev:after,.swiper-button-next:after{
+    display: none;
+  } 
+
+  /* 선택자를 길게 작성을 해야 적용된다 */
+  #third_page .swiper-button-prev,
+  #third_page .swiper-button-next {
+    top:auto;
+    bottom: -1px;
+  }
+
+.swiper-slide {
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    border-radius: 3%;
+    padding: 2rem;
+
+}
+#ui_list {
+    /* border : 1px solid green; */
+    position: relative;
+    top: 4rem;
+    left: 16rem;
+    width: 95rem;
+    height: 5rem;
+
+}
+
+.swiper-button-next .btn,
+.swiper-button-prev .btn {
+    color: white;
+    border : 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 100%;
+    font-size: 1.5rem;;
+
+    
+}
+
+#third_page .swiper-button-next  {
+    transform: translateX(-13rem);
+}
+
+#third_page .swiper-button-prev  {
+    transform: translateX(75rem)
+}
+
+  .swiper .swiper-pagination-bullet {
+    background-color: #ffffff;
+    margin: 0 10px;
+    transform: translateX(-40rem);
+  }
+
+.company_info {
+    margin: 2rem 0 0 0;
+}
+
+.company_info h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:rgb(37, 35, 35);
+    line-height: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.company_info p {
+    color:rgb(94, 90, 90);
+    line-height: 1.5rem;
+    
+    
+}
+
+/* 4th page */
+
+#fourth_page {
+    background-image: url('https://ex.kinkos.co.kr/images/Main-Home_WhatWeDoBG.jpeg');
+    background-size: 98%;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 1rem;
+
+}
+
+.four_item_box {
+    width: 30%;
+    height: 50vh;
+}
+
+
+.four_item_box:last-child {
+    margin: 2.5rem 0 0 0;
+}
+.trans_btn {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.6rem 1.2rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50rem;
+    color: white;
+}
+
+.trans_btn > img {
+    width: 1.5rem;
+    margin: 0 0 0 0.1rem;
+}
+
+.reports {
+    height: 10rem;
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 1rem;
+    background-color: rgba(0, 6, 63, 0.7);
+    padding: 2rem;
+}
+
+.reports:hover {
+    animation: btn_hover 1.5s;
+}
+
+.reports:first-child {
+    margin: 0 0 3rem 0;
+}
+
+.reports > h6 {
+    color:rgb(255, 255, 255);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.reports > h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0 2.5rem 0;
+}
+
+#fourth_page > div:first-child > h6 {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #9eeeff;
+    
+}
+
+#fourth_page > div:first-child > p {
+    line-height: 1.5rem;
+    color: rgb(224, 224, 224)
+}
+
+#fourth_page > div:first-child > p > b {
+    font-weight: 800;
+    color: white;
+}
+
+#fourth_page > div:first-child > h3 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0 ;        
+}
+
+
+
+/* 5th page  */
+#fifth_page {
+    background-color: #eef8ff;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content_5 {
+    /* border: 1px solid green; */
+    width: 80%;
+    height: 30rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#content_5 > article:last-child > img {
+    box-shadow: 1px 1px 14px 0px rgb(194, 194, 194);   
+}
+
+
+#content_5 > article:last-child > img:first-child{
+    width: 15rem;
+}
+
+#content_5 > article:last-child > img:last-child{
+    width: 10rem;
+    margin: 0 0 9rem 1rem;
+}
+
+#content_5 > article:first-child > h6 {
+    color:rgb(20, 20, 216);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#content_5 > article:first-child > h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0 14rem 0;;
+
+}
+#content_5 > article:first-child > p {
+    line-height: 1.5rem;
+    color:rgb(20, 19, 19)
+}
+#content_5 > article:first-child > .more_btn {
+    margin: 3rem 0 0 0;
+}
+
+/* 6th page  */
+#sixth_page {
+    /* background-image: url('https://ex.kinkos.co.kr/images/Main-Home_ContentsBG.png'); */
+    /* background-size: 90%; */
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#content_6 {
+    display: flex;
+    /* width: 80%; */
+}
+#content_6 > article:first-child {
+    margin: 1rem 0 0 7rem;
+}
+
+#content_6 > article:first-child > p {
+    font-size: 1rem;
+    color:rgb(70, 67, 67)
+}
+
+
+#content_6 > article > .more_btn {
+    margin: 7rem 0 0 25rem;
+}
+#item_wrapper {
+    display: flex;
+    width: 81rem;
+    justify-content: space-between;
+
+}
+.item_box_2 {
+    padding: 2rem;
+    box-sizing: border-box;
+    color: white;
+    background-image: url('https://ex.kinkos.co.kr/images/contentscard01.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 40rem;
+    height: 15rem;
+    
+}
+
+.item_box_2:hover {
+    animation: btn_hover 2s;
+}
+
+.item_box_2 a {
+    color: white;
+}
+
+.item_box_2 > h6 {
+    color: #bce2ea;
+    letter-spacing: -1px ;
+    font-weight: bold;
+    word-spacing: 0.3rem;
+    margin: 0 0 3.5rem 0;
+}
+
+.item_box_2 > h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.01rem;
+    word-spacing: 0.2rem;
+}
+
+
+/* last page  */
+#last_page {
+    color: white;
+    height: 35vh;
+    background: linear-gradient(0deg, rgba(158, 238, 255, 0.25) 0%, rgba(38, 56, 224, 0.25) 100%), #2638E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last_page_item_box {
+    width: 30%;
+    height: 10rem;
+}
+
+.last_page_item_box:last-child {
+    width: 20%;
+}
+.last_page_item_box > form {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+.last_page_item_box > form > label:first-child{
+    margin: 0 0 0.5rem 0;
+}
+
+.last_page_item_box > form > div div:first-child {
+    margin: 0.5rem 0 0.3rem 0;
+}   
+
+.last_page_item_box > form > input[type='text'] {
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.1rem 0 0 0.3rem;
+    font-family: 'Pretendard-Regular';
+
+}
+
+.last_page_item_box > form > input[type='text']::placeholder {
+    color: rgb(199, 199, 199);
+}
+
+.last_page_item_box > form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.last_page_item_box:first-child > h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+}
+.last_page_item_box:first-child  p {
+    line-height: 1.5rem;
+}
+
+
+
+
+
+/* 푸터 */
+footer {
+    background-color: #0f1a2a;;
+    width: 100%;
+    height: 25rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer_wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#footer_wrapper > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#footer_wrapper > div:first-child > img {
+    width: 8rem;
+    height: 1.5rem;
+
+}
+#footer_item_box_1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 2rem;
+}
+
+#footer_item_box_1 > div:last-child {
+    margin: 0 0 0 25rem;
+}
+
+#footer_item_box_1 > div {
+    line-height: 1.5rem;
+
+
+}
+hr {
+    height: 1px;
+    width: 100%; 
+    background: rgb(204, 204, 204);
+    border: none;
+}
